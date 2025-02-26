@@ -1,3 +1,10 @@
+import Card from "../components/ui/Card";
+
 export default function PageNotFound() {
-  return <h1>pagina non trovata</h1>;
+  return (
+    <>
+      <Card />
+      <h1>pagina non trovata</h1>;
+    </>
+  );
 }
