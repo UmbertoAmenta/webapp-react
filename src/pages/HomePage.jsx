@@ -20,8 +20,10 @@ export default function HomePage() {
   return (
     <main>
       <div className="mx-auto max-w-6xl py-5">
-        <Heading variant={2}>Lista Movies</Heading>
-        <ul className="max-w-6xl mx-auto pt-3 grid grid-cols-3 gap-4">
+        <Heading variant={2}>
+          <div className="text-center p-3">Lista Movies</div>
+        </Heading>
+        <ul className="max-w-6xl mx-auto pt-3 grid grid-cols-3 gap-8">
           {movies.map((movie) => {
             return <Card key={movie.id} {...movie} />;
           })}

@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+:root {
+  --color-primary: #cefc7eff;
+  --color-secondary: #688f7aff;
+  --color-terziary: black;
+}
 
-/* colori presi da tailwindcss,
-così evito l'errore su apply */
 body {
-  background-color: oklch(0.968 0.007 247.896);
-  color: oklch(0.279 0.041 260.031);
-  /* @apply bg-slate-100; */
-  /* @apply text-slate-800; */
+  background-color: #f2f6faff;
 }
