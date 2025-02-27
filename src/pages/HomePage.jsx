@@ -1,6 +1,11 @@
 import axios from "../api/axios";
 import { useEffect, useState } from "react";
 
+// COMPONENTS
+import Card from "../components/ui/Card";
+// UI
+import Heading from "../components/ui/Heading";
+
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
 
@@ -14,16 +19,14 @@ export default function HomePage() {
 
   return (
     <main>
-      <h1>Lista Movies</h1>
-      {movies.map((movie) => {
-        return (
-          <ul key={movie.id}>
-            <li>{movie.title}</li>
-            {/* <li>{movie.genre}</li> */}
-            {/* <li>{movie.release_year}</li> */}
-          </ul>
-        );
-      })}
+      <div className="mx-auto max-w-6xl py-5">
+        <Heading variant={2}>Lista Movies</Heading>
+        <ul className="max-w-6xl mx-auto pt-3 grid grid-cols-3 gap-4">
+          {movies.map((movie) => {
+            return <Card key={movie.id} {...movie} />;
+          })}
+        </ul>
+      </div>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-export default function VoteStars(vote) {
+export default function VoteAvgStars({ vote }) {
   if (vote == 0) {
     return <p>Non disponibile</p>;
   }
@@ -12,5 +12,5 @@ export default function VoteStars(vote) {
       <i key={voteStars.length} className="fa-regular fa-star"></i>
     );
   }
-  return voteStars;
+  return <div className="text-amber-200">{voteStars}</div>;
 }
