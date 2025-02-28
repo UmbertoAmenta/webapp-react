@@ -7,11 +7,15 @@ import Button from "./Button";
 export default function Card({ ...movie }) {
   return (
     <>
-      <li className="flex bg-white rounded-3xl overflow-hidden">
-        <div className="w-4/7">
+      <li className="flex bg-white rounded-3xl overflow-hidden hover:scale-125 hover:transition-all duration-300 ease-linear ">
+        <div className="w-4/7 aspect-2/3">
           <img
             className="h-full object-cover"
-            src={movie.image}
+            src={
+              movie.image
+                ? movie.image
+                : "https://png.pngtree.com/png-clipart/20211024/original/pngtree-coming-soon-hints-on-board-png-image_6873031.png"
+            }
             alt={movie.title}
           />
         </div>
@@ -24,7 +28,7 @@ export default function Card({ ...movie }) {
             <li>
               <VoteAvgStars vote={movie.avg_vote} />
             </li>
-            <li className="text-xs overflow-ellipsis">{movie.abstract}</li>
+            <li className="text-xs line-clamp-8">{movie.abstract}</li>
           </ul>
           <Link to={`/movies/${movie.id}`}>
             <Button variant="primary">Altro...</Button>

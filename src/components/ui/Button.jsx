@@ -7,7 +7,7 @@ export default function Button({ children, variant }) {
     secondary: "bg-[var(--color-secondary)]",
   };
   return (
-    <button className={`cursor-pointer p-3 rounded-2xl  ${variants[variant]}`}>
+    <button className={`cursor-pointer p-3 rounded-2xl ${variants[variant]}`}>
       <strong>{children}</strong>
     </button>
   );
