@@ -9,3 +9,7 @@
 body {
   background-color: #f2f6faff;
 }
+
+.active {
+  color: #cefc7eff;
+}

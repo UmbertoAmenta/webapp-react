@@ -7,7 +7,7 @@ import Button from "./Button";
 export default function Card({ ...movie }) {
   return (
     <>
-      <li className="flex bg-white rounded-3xl overflow-hidden hover:scale-125 hover:transition-all duration-300 ease-linear ">
+      <li className="flex bg-white rounded-3xl overflow-hidden hover:scale-115 hover:transition-all duration-300 ease-linear ">
         <div className="w-4/7 aspect-2/3">
           <img
             className="h-full object-cover"
