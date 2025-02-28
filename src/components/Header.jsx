@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router";
 // UI
 import Logo from "./ui/Logo";
 import Heading from "./ui/Heading";
-import NavBar from "./ui/NavBar";
+import NavBar from "./NavBar";
 
 export default function Header() {
   return (
