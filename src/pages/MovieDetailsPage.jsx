@@ -29,7 +29,7 @@ export default function MovieDetailsPage() {
       });
   };
 
-  useEffect(fetchMovie, [id, useNavigate]);
+  useEffect(fetchMovie, [id, navigate, useNavigate]);
 
   return (
     <main className="max-w-6xl m-auto p-10 ">
@@ -69,7 +69,7 @@ export default function MovieDetailsPage() {
           </ul>
         </section>
       )}
-      <ReviewForm />
+      <ReviewForm fetchMovie={fetchMovie} />
     </main>
   );
 }
