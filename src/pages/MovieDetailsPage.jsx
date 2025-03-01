@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router";
 
 // COMPONENTS
 import Review from "../components/Review";
+import ReviewForm from "../components/ReviewForm";
 
 // UI
 import VoteAvgStars from "../components/ui/VoteStars";
@@ -68,6 +69,7 @@ export default function MovieDetailsPage() {
           </ul>
         </section>
       )}
+      <ReviewForm />
     </main>
   );
 }
