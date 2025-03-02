@@ -45,7 +45,7 @@ export default function ({ fetchMovie }) {
       <Heading variant={4}>Esprimi la tua opinione</Heading>
       <form onSubmit={handlerSubmit}>
         <div className="flex flex-col items-start my-4">
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row items-start">
             <div className=" px-3 mr-5 py-1 rounded-3xl space-x-2 flex flex-col items-center">
               <label htmlFor="name">Inserisci il tuo nome</label>
               <input
@@ -76,7 +76,7 @@ export default function ({ fetchMovie }) {
             </div>
           </div>
 
-          <div className="px-3 mr-5 py-1 rounded-3xl space-x-2 flex flex-col items-center w-1/3">
+          <div className="px-3 mr-5 py-1 rounded-3xl space-x-2 flex flex-col items-center w-2/3 md:w-1/3">
             <label htmlFor="text">Lascia un commento</label>
             <textarea
               type="text"

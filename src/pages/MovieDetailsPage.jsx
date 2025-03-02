@@ -32,10 +32,10 @@ export default function MovieDetailsPage() {
   useEffect(fetchMovie, [id, navigate, useNavigate]);
 
   return (
-    <main className="max-w-6xl m-auto p-10 ">
-      <div className="flex w-full">
+    <main className="max-w-6xl m-auto p-10">
+      <div className="flex flex-col items-center sm:items-stretch sm:flex-row">
         <img
-          className="h-full w-1/3 aspect-2/3 object-cover rounded-l-3xl"
+          className="h-full w-2/3 sm:w-1/3 aspect-2/3 object-cover rounded-t-3xl sm:rounded-t-none sm:rounded-l-3xl"
           src={
             movie.image
               ? movie.image
@@ -43,8 +43,8 @@ export default function MovieDetailsPage() {
           }
           alt={movie.title}
         />
-        <ul className="bg-white p-10 rounded-r-3xl space-y-3 flex-1">
-          <li className="text-3xl">
+        <ul className="bg-white w-2/3 text-sm md:text-base p-10 rounded-b-3xl sm:rounded-bl-none sm:rounded-tr-3xl space-y-3 flex-1">
+          <li className="text-lg md:text-3xl">
             <strong>{movie.title}</strong>
           </li>
           <li>{movie.genre}</li>

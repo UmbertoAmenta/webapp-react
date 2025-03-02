@@ -23,7 +23,7 @@ export default function HomePage() {
         <Heading variant={2}>
           <div className="text-center p-3">Lista Movies</div>
         </Heading>
-        <ul className="max-w-6xl mx-auto pt-3 grid grid-cols-3 gap-8">
+        <ul className="max-w-md lg:max-w-6xl mx-auto pt-3 grid  lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {movies.map((movie) => {
             return <Card key={movie.id} {...movie} />;
           })}
