@@ -41,7 +41,7 @@ export default function ({ fetchMovie }) {
   };
 
   return (
-    <section className="bg-white mt-5 rounded-3xl p-5 ">
+    <section className="bg-white mt-5 rounded-3xl p-5">
       <Heading variant={4}>Esprimi la tua opinione</Heading>
       <form onSubmit={handlerSubmit}>
         <div className="flex flex-col items-start my-4">
@@ -54,6 +54,7 @@ export default function ({ fetchMovie }) {
                 name="name"
                 className="border-1 rounded-3xl pl-3"
                 placeholder="..."
+                required
                 value={formData.name}
                 onChange={(e) => handlerField("name", e.target.value)}
               />
@@ -66,23 +67,25 @@ export default function ({ fetchMovie }) {
                 id="vote"
                 name="vote"
                 className="border-1 rounded-3xl pl-3"
-                placeholder="0"
                 min={0}
                 max={5}
+                required
                 value={formData.vote}
                 onChange={(e) => handlerField("vote", e.target.value)}
               />
             </div>
           </div>
 
-          <div className=" px-3 mr-5 py-1 rounded-3xl space-x-2 flex flex-col items-center">
+          <div className="px-3 mr-5 py-1 rounded-3xl space-x-2 flex flex-col items-center w-1/3">
             <label htmlFor="text">Lascia un commento</label>
-            <input
+            <textarea
               type="text"
               id="text"
               name="text"
-              className="border-1 rounded-3xl pl-3"
+              className="border-1 rounded-3xl pl-3 w-full"
               placeholder="..."
+              rows={3}
+              required
               value={formData.text}
               onChange={(e) => handlerField("text", e.target.value)}
             />
